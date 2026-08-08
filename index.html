@@ -546,19 +546,11 @@ h2.title{
 /* ── CHANNEL ── */
 .chan{ display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:center; }
 @media (max-width:880px){ .chan{ grid-template-columns:1fr } }
-.chan-art{
-  position:relative; aspect-ratio:1; display:grid; place-items:center;
-  border:1px solid var(--hair-soft); border-radius:3px; overflow:hidden;
+.chan-figure{ margin:0; justify-self:center; width:100%; max-width:340px; }
+.chan-figure img{
+  width:100%; height:auto; display:block; border-radius:4px;
+  border:1px solid var(--hair-soft);
 }
-.orbit{ position:absolute; border:1px solid var(--hair-soft); border-radius:50%; }
-.o1{ inset:12%; animation:spin 24s linear infinite; border-style:dashed; }
-.o2{ inset:26%; animation:spin 34s linear reverse infinite; }
-@keyframes spin{ to{ transform:rotate(360deg) } }
-.chan-art .big{
-  position:relative; font-size:clamp(1.8rem,5vw,3rem); font-weight:800; line-height:1;
-  letter-spacing:-.05em; text-align:center; margin:0;
-}
-.chan-art .big b{ color:var(--coral); }
 .yt-lab{ font-family:var(--mono); font-size:.66rem; letter-spacing:.24em; color:var(--coral); margin:0 0 1rem; }
 
 /* ── FINAL — 글자 좌측, 인물 사진 우측 ── */
@@ -1030,11 +1022,9 @@ h2.title{
   <!-- ═══ CHANNEL ═══ -->
   <section class="sec band-b" id="channel">
     <div class="wrap chan">
-      <div class="chan-art rv" aria-hidden="true">
-        <div class="orbit o1"></div>
-        <div class="orbit o2"></div>
-        <p class="big">JUMP<br>HIGHER<b>!</b></p>
-      </div>
+      <figure class="chan-figure rv">
+        <img src="assets/jump-higher-brand.webp" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" width="1279" height="2048" loading="lazy">
+      </figure>
       <div class="rv">
         <p class="yt-lab">▶ YOUTUBE CHANNEL</p>
         <h2 class="title">중일투더맥스의<br><span class="serif-it">배움과 성장 기록</span></h2>
