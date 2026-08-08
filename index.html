@@ -246,7 +246,7 @@ h2.title{
 
 /* 카드는 영상 아래에 나란히 — 영상과 겹치지 않는다 */
 .hero-cards{
-  display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
+  display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
   gap:.8rem; margin-top:.85rem;
 }
 @media (max-width:620px){ .hero-cards{ grid-template-columns:1fr; } }
@@ -294,13 +294,13 @@ h2.title{
   background:var(--surface); border:1px solid var(--hair-soft);
 }
 .float span{
-  display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; color:var(--gold);
-  margin-bottom:.4rem;
+  display:block; font-family:var(--mono); font-size:.74rem; font-weight:700;
+  letter-spacing:.11em; color:var(--gold); line-height:1.4; margin-bottom:.45rem;
 }
 .float strong{ font-size:.92rem; font-weight:700; line-height:1.5; letter-spacing:-.015em; }
 .f-ai{ display:grid; align-content:center; }
 .f-ai strong{ display:block; color:var(--coral); font-size:1.15rem; }
-.f-ai span{ margin:.3rem 0 0; color:var(--fg-dim); }
+.f-ai span{ margin:.35rem 0 0; color:var(--fg-dim); }
 
 /* ══════ CAROUSEL (2장) ══════ */
 /* 캐러셀은 사진 위 자막 가독성을 위해 두 테마 모두 어두운 스크림을 유지한다 */
@@ -488,21 +488,25 @@ h2.title{
 .tl-row h3{ font-size:1.1rem; font-weight:750; letter-spacing:-.02em; margin:0 0 .35rem; }
 .tl-row p{ margin:0; color:var(--fg-dim); font-size:.95rem; }
 
+/* EDUCATION NOTE — 좌측 EXPERIENCE 타임라인과 같은 타이포 스케일을 쓴다 */
 .note{ padding:2.2rem 1.9rem; border:1px solid var(--hair-soft); background:var(--surface); border-radius:3px; }
-.note .lab{ font-family:var(--mono); font-size:.6rem; letter-spacing:.2em; color:var(--gold); margin:0 0 1rem; }
+.note .lab{ font-family:var(--mono); font-size:.66rem; letter-spacing:.26em; color:var(--gold); margin:0 0 1rem; }
 .note .qm{ font-family:var(--serif); font-size:3rem; line-height:.6; color:var(--coral); }
 .note blockquote{
-  margin:1rem 0 2rem; font-size:1.2rem; font-weight:750; line-height:1.5; letter-spacing:-.025em;
+  margin:1rem 0 2rem; font-size:1.3rem; font-weight:750; line-height:1.5; letter-spacing:-.025em;
 }
 .links{ display:grid; gap:.7rem; }
 .ilink{
-  display:block; text-decoration:none; padding:1rem 1.1rem; border-radius:2px;
+  display:block; text-decoration:none; padding:1.15rem 1.15rem; border-radius:2px;
   border:1px solid var(--hair-soft); transition:background .3s,border-color .3s,transform .3s;
 }
 .ilink:hover{ background:color-mix(in srgb, var(--fg) 7%, transparent); border-color:var(--coral); transform:translateX(4px); }
-.ilink span{ display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; color:var(--gold); }
-.ilink strong{ display:block; font-size:.95rem; font-weight:700; margin:.35rem 0 .25rem; letter-spacing:-.015em; }
-.ilink small{ display:block; font-size:.76rem; color:var(--fg-dim); }
+/* .idx small 과 동일 */
+.ilink span{ display:block; font-family:var(--mono); font-size:.66rem; letter-spacing:.26em; color:var(--gold); }
+/* .tl-row h3 와 동일 */
+.ilink strong{ display:block; font-size:1.1rem; font-weight:750; margin:.5rem 0 .35rem; letter-spacing:-.02em; line-height:1.4; }
+/* .tl-row p 와 동일 */
+.ilink small{ display:block; font-size:.95rem; color:var(--fg-dim); }
 
 /* ── 06 FIELD ── */
 .creds{
