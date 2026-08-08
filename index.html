@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="조태욱 · 중일투더맥스 | 영어교육과 AI 교육 혁신">
 <meta property="og:description" content="중일고등학교 영어교사 조태욱(중일투더맥스). 도전, 성장, 나눔으로 내일의 교실을 만듭니다. AI·디지털 교육 연수와 수업 혁신 기록.">
-<meta property="og:image" content="assets/jump-higher-brand.webp">
+<meta property="og:image" content="assets/jump-higher-brand.jpg">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2316265E'/><text x='32' y='43' font-family='system-ui,sans-serif' font-size='26' font-weight='800' fill='%23fff' text-anchor='middle'>J:H</text></svg>">
@@ -244,12 +244,9 @@ h2.title{
 .sound-btn[aria-pressed="true"] .ico-on{ display:block; }
 .sound-btn[aria-pressed="true"] .ico-off{ display:none; }
 
-/* 카드는 영상 아래에 나란히 — 영상과 겹치지 않는다 */
-.hero-cards{
-  display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
-  gap:.8rem; margin-top:.85rem;
-}
-@media (max-width:620px){ .hero-cards{ grid-template-columns:1fr; } }
+/* 카드는 영상 아래에 세로로 — 영상과 겹치지 않고,
+   미션 문장이 어느 화면에서도 2줄로 유지될 만큼 폭을 확보한다. */
+.hero-cards{ display:grid; gap:.7rem; margin-top:.85rem; }
 .hero-grid{
   display:grid; grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);
   gap:clamp(2rem,5vw,4rem); align-items:center;
@@ -297,10 +294,14 @@ h2.title{
   display:block; font-family:var(--mono); font-size:.74rem; font-weight:700;
   letter-spacing:.11em; color:var(--gold); line-height:1.4; margin-bottom:.45rem;
 }
+/* MY MISSION 은 옆의 AI 와 같은 크기로 */
+.f-mission span{ font-size:1.15rem; letter-spacing:.03em; margin-bottom:.6rem; }
 .float strong{ font-size:.92rem; font-weight:700; line-height:1.5; letter-spacing:-.015em; }
-.f-ai{ display:grid; align-content:center; }
-.f-ai strong{ display:block; color:var(--coral); font-size:1.15rem; }
-.f-ai span{ margin:.35rem 0 0; color:var(--fg-dim); }
+.f-mission strong{ font-size:.8rem; line-height:1.65; }
+/* 카드가 세로로 쌓이므로 AI 카드는 한 줄로 눕힌다 */
+.f-ai{ display:flex; align-items:baseline; gap:.9rem; }
+.f-ai strong{ color:var(--coral); font-size:1.15rem; flex:none; }
+.f-ai span{ margin:0; color:var(--fg-dim); }
 
 /* ══════ CAROUSEL (2장) ══════ */
 /* 캐러셀은 사진 위 자막 가독성을 위해 두 테마 모두 어두운 스크림을 유지한다 */
@@ -674,7 +675,7 @@ h2.title{
         <div class="hero-cards">
           <div class="float f-mission">
             <span>MY MISSION</span>
-            <strong>단 한 명도 포기하지 않는<br>학생 맞춤형 수업</strong>
+            <strong>단 한 명도 포기하지 않는 학생<br>맞춤형 수업</strong>
           </div>
           <div class="float f-ai">
             <strong>AI</strong>
@@ -688,7 +689,7 @@ h2.title{
   <!-- ═══ CAROUSEL (2장) ═══ -->
   <section class="reel" id="reel" aria-roledescription="carousel" aria-label="중일투더맥스 대표 이미지">
     <article class="slide on" data-i="0" role="group" aria-label="1 / 2">
-      <div class="slide-media"><img src="assets/jump-higher-brand.webp" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" style="--pos:center 18%"></div>
+      <div class="slide-media"><img src="assets/jump-higher-brand.jpg" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" style="--pos:center 18%"></div>
       <div class="slide-copy">
         <p class="kicker">03 · JUNGIL HIGH SCHOOL</p>
         <h3>배움은 즐겁게,<br>성장은 꾸준히.</h3>
@@ -792,7 +793,7 @@ h2.title{
   <!-- ═══ 03 SCHOOL ═══ -->
   <section class="sec band-a">
     <div class="wrap school">
-      <div class="rv"><img src="assets/jump-higher-brand.webp" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" width="1279" height="2048" loading="lazy"></div>
+      <div class="rv"><img src="assets/jump-higher-brand.jpg" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" width="1279" height="2048" loading="lazy"></div>
       <div class="rv">
         <div class="idx"><b>03</b><small>JUNGIL HIGH SCHOOL</small></div>
         <p class="big-jump">JUMP<em>HIGHER</em></p>
@@ -1033,7 +1034,7 @@ h2.title{
   <section class="sec band-b" id="channel">
     <div class="wrap chan">
       <figure class="chan-figure rv">
-        <img src="assets/jump-higher-brand.webp" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" width="1279" height="2048" loading="lazy">
+        <img src="assets/jump-higher-brand.jpg" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" width="1279" height="2048" loading="lazy">
       </figure>
       <div class="rv">
         <p class="yt-lab">▶ YOUTUBE CHANNEL</p>
