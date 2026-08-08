@@ -190,6 +190,7 @@ h2.title{
   border-bottom:1px solid var(--a-hair-soft);
   color:var(--a-fg);
   --fg:var(--a-fg); --fg-dim:var(--a-dim); --hair:var(--a-hair);
+  --sky:var(--a-sky); --coral:var(--a-coral);
   --logo-bg:var(--a-logo-bg); --logo-fg:var(--a-logo-fg);
 }
 .nav-in{ display:flex; align-items:center; gap:1.5rem; height:72px; }
@@ -214,8 +215,11 @@ h2.title{
   letter-spacing:.15em; text-transform:uppercase; color:var(--fg-dim); line-height:1.4;
 }
 .nav-links{ display:flex; gap:1.5rem; }
-.nav-links a{ font-size:.82rem; color:var(--fg-dim); text-decoration:none; transition:color .2s; white-space:nowrap; }
-.nav-links a:hover{ color:var(--fg); }
+.nav-links a{
+  font-size:.95rem; font-weight:700; letter-spacing:-.02em;
+  color:var(--sky); text-decoration:none; transition:color .2s; white-space:nowrap;
+}
+.nav-links a:hover{ color:var(--coral); }
 @media (max-width:980px){ .nav-links{ display:none; } }
 
 /* ── hero — 영상은 우측 칼럼에. 스크림을 걷어내 인물이 또렷하게 보인다. ── */
@@ -253,8 +257,9 @@ h2.title{
 }
 @media (max-width:960px){ .hero-grid{ grid-template-columns:1fr; } }
 .pill{
-  display:inline-flex; align-items:center; gap:.55rem; padding:.4rem .95rem;
-  border:1px solid var(--hair); border-radius:999px; font-size:.78rem; color:var(--fg-dim);
+  display:inline-flex; align-items:center; gap:.6rem; padding:.5rem 1.15rem;
+  border:1.5px solid var(--sky); border-radius:999px;
+  font-size:.95rem; font-weight:700; letter-spacing:-.02em; color:var(--sky);
   margin-bottom:1.5rem;
 }
 .pill i{ width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none; }
