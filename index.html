@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>조태욱 · 중일투더맥스 | 영어교육과 AI 교육 혁신</title>
+<meta name="description" content="중일고등학교 영어교사 조태욱(중일투더맥스). 도전, 성장, 나눔으로 내일의 교실을 만듭니다. AI·디지털 교육 연수와 수업 혁신 기록.">
+<meta name="author" content="조태욱">
+<meta property="og:type" content="website">
+<meta property="og:title" content="조태욱 · 중일투더맥스 | 영어교육과 AI 교육 혁신">
+<meta property="og:description" content="중일고등학교 영어교사 조태욱(중일투더맥스). 도전, 성장, 나눔으로 내일의 교실을 만듭니다. AI·디지털 교육 연수와 수업 혁신 기록.">
+<meta property="og:image" content="assets/jump-higher-brand.webp">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2316265E'/><text x='32' y='43' font-family='system-ui,sans-serif' font-size='26' font-weight='800' fill='%23fff' text-anchor='middle'>J:H</text></svg>">
+<style>
+/* 최소 리셋 — 아티팩트 호스트가 넣어주던 것을 대체 */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+img,svg,video{ max-width:100%; }
+button{ font:inherit; color:inherit; }
+</style>
+</head>
+<body><style>
+/* ═══════════════════════════════════════════════════════
+   조태욱 · 중일투더맥스
+   내용: jungil-to-the-max.vercel.app 원문 그대로
+   양식: 에디토리얼 시네마틱 (russellbrand.com 구조)
+   밴드: 홀수 = ink, 짝수 = 남색(navy) — 섹션 구분 강화
+   ═══════════════════════════════════════════════════════ */
+
+:root{
+  /* ── 고정 브랜드 색 (테마 무관) ── */
+  --cream: #F3EADA;
+  --ink:   #0E1330;
+  --coral-solid: #C8434F;   /* 버튼·배지 배경 전용 */
+
+  /* ── 밴드 B (짝수) = 짙은 남색. 두 테마에서 동일 ── */
+  --b-bg:#16265E; --b-fg:#F3EADA; --b-dim:#AAB7D9;
+  --b-hair:rgba(243,234,218,.24); --b-hair-soft:rgba(243,234,218,.14);
+  --b-surface:rgba(243,234,218,.065);
+  --b-sky:#C3D4EC; --b-gold:#EDBC63; --b-coral:#F58E98;
+  --b-logo-bg:#0A1638; --b-logo-fg:#FFFFFF;   /* 남색 밴드 위 = 더 짙은 남색 뱃지 + 흰 글자 */
+
+  /* ── 밴드 A (홀수) = 라이트 기본값 ── */
+  --a-bg:#F3EADA; --a-fg:#141B3E; --a-dim:#59628A;
+  --a-hair:rgba(20,27,62,.24); --a-hair-soft:rgba(20,27,62,.13);
+  --a-surface:rgba(20,27,62,.045);
+  --a-sky:#1E2A5E; --a-gold:#8A5F0C; --a-coral:#A8323E;
+  --a-logo-bg:#16265E; --a-logo-fg:#FFFFFF;   /* 크림 배경 위 = 남색 뱃지 */
+  --a-stat-hi:#000000;                        /* 강조 숫자(2025) — 라이트에선 검정 */
+
+  --nav-bg:rgba(243,234,218,.88);
+  --float-bg:rgba(255,252,246,.94);
+  color-scheme: light;
+
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans:  'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+           'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui, sans-serif;
+  --mono:  ui-monospace, 'SF Mono', SFMono-Regular, 'Cascadia Mono', Consolas, monospace;
+
+  --pad: clamp(1.25rem, 5vw, 5.5rem);
+  --maxw: 1200px;
+}
+
+/* 다크에서는 홀수 밴드만 잉크로 전환 — 짝수 남색 밴드는 그대로 */
+@media (prefers-color-scheme: dark){
+  :root{
+    --a-bg:#0E1330; --a-fg:#F3EADA; --a-dim:#A2AFD2;
+    --a-hair:rgba(243,234,218,.20); --a-hair-soft:rgba(243,234,218,.11);
+    --a-surface:rgba(243,234,218,.045);
+    --a-sky:#B9CDE8; --a-gold:#E0A93B; --a-coral:#E4707C;
+    --a-logo-bg:#2A3F86; --a-logo-fg:#FFFFFF;
+    --a-stat-hi:#FFFFFF;
+    --nav-bg:rgba(14,19,48,.88);
+    --float-bg:rgba(14,19,48,.92);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --a-bg:#0E1330; --a-fg:#F3EADA; --a-dim:#A2AFD2;
+  --a-hair:rgba(243,234,218,.20); --a-hair-soft:rgba(243,234,218,.11);
+  --a-surface:rgba(243,234,218,.045);
+  --a-sky:#B9CDE8; --a-gold:#E0A93B; --a-coral:#E4707C;
+  --a-logo-bg:#2A3F86; --a-logo-fg:#FFFFFF;
+    --a-stat-hi:#FFFFFF;
+  --nav-bg:rgba(14,19,48,.88);
+  --float-bg:rgba(14,19,48,.92);
+  color-scheme: dark;
+}
+:root[data-theme="light"]{
+  --a-bg:#F3EADA; --a-fg:#141B3E; --a-dim:#59628A;
+  --a-hair:rgba(20,27,62,.24); --a-hair-soft:rgba(20,27,62,.13);
+  --a-surface:rgba(20,27,62,.045);
+  --a-sky:#1E2A5E; --a-gold:#8A5F0C; --a-coral:#A8323E;
+  --a-logo-bg:#16265E; --a-logo-fg:#FFFFFF;
+  --a-stat-hi:#000000;
+  --nav-bg:rgba(243,234,218,.88);
+  --float-bg:rgba(255,252,246,.94);
+  color-scheme: light;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0; background:var(--a-bg); color:var(--a-fg);
+  font-family:var(--sans); font-size:1.0625rem; line-height:1.7;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  /* 한글은 기본값이면 단어 중간에서 끊긴다. 어절 단위로 줄바꿈. */
+  word-break:keep-all; overflow-wrap:break-word;
+}
+
+.page{ position:relative; z-index:1; }
+
+.wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
+.narrow{ max-width:820px; margin-inline:auto; }
+
+/* ── 밴드 교차 ──
+   각 밴드가 자기 전경색 토큰을 정의한다. 하위 요소는 전부 이 토큰으로만
+   색을 참조하므로, 테마가 바뀌어도 밴드별 대비가 스스로 맞는다. */
+.band-a{
+  background:var(--a-bg); color:var(--a-fg);
+  --fg:var(--a-fg); --fg-dim:var(--a-dim);
+  --hair:var(--a-hair); --hair-soft:var(--a-hair-soft); --surface:var(--a-surface);
+  --sky:var(--a-sky); --gold:var(--a-gold); --coral:var(--a-coral);
+  --logo-bg:var(--a-logo-bg); --logo-fg:var(--a-logo-fg);
+  --band-bg:var(--a-bg);
+}
+.band-b{
+  background:var(--b-bg); color:var(--b-fg);
+  --fg:var(--b-fg); --fg-dim:var(--b-dim);
+  --hair:var(--b-hair); --hair-soft:var(--b-hair-soft); --surface:var(--b-surface);
+  --sky:var(--b-sky); --gold:var(--b-gold); --coral:var(--b-coral);
+  --logo-bg:var(--b-logo-bg); --logo-fg:var(--b-logo-fg);
+  --band-bg:var(--b-bg);
+}
+.band-a, .band-b{ position:relative; }
+.sec{ padding-block:clamp(4.5rem,10vw,9rem); }
+
+
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:4px; }
+
+/* ── 섹션 인덱스 (원본 01–07 유지) ── */
+.idx{ display:flex; align-items:center; gap:.9rem; margin-bottom:1.6rem; }
+.idx b{
+  font-family:var(--mono); font-size:.95rem; font-weight:700; color:var(--gold);
+  font-variant-numeric:tabular-nums;
+}
+.idx small{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--fg-dim);
+}
+.idx::after{ content:""; height:1px; flex:1; background:var(--hair-soft); }
+
+.kicker{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--sky); margin:0 0 1rem;
+}
+h2.title{
+  font-size:clamp(1.9rem,4.4vw,3.4rem); line-height:1.16; letter-spacing:-.035em;
+  font-weight:800; margin:0 0 1.1rem; text-wrap:balance;
+}
+.lede{ color:var(--fg-dim); max-width:60ch; margin:0; }
+.serif-it{ font-family:var(--serif); font-style:italic; font-weight:400; letter-spacing:-.01em; }
+
+.motif{ display:flex; align-items:center; justify-content:center; gap:1.1rem; color:var(--gold); }
+.motif svg{ width:26px; height:26px; opacity:.8; }
+.motif::before,.motif::after{
+  content:""; height:1px; flex:1; max-width:150px;
+  background:linear-gradient(90deg,transparent,var(--hair),transparent);
+}
+
+.btn{
+  display:inline-flex; align-items:center; gap:.55rem; text-decoration:none;
+  font-size:.86rem; font-weight:650; padding:.85rem 1.6rem; border-radius:2px; cursor:pointer;
+  border:1px solid var(--hair); color:var(--fg); background:transparent;
+  font-family:inherit; transition:background .25s,color .25s,border-color .25s;
+}
+.btn:hover{ border-color:var(--fg); }
+.btn-hot{ background:var(--coral-solid); border-color:var(--coral-solid); color:#fff; }
+.btn-hot:hover{ background:transparent; color:var(--coral); border-color:var(--coral); }
+.btn-cream{ background:var(--fg); border-color:var(--fg); color:var(--band-bg,var(--a-bg)); }
+.btn-cream:hover{ background:transparent; color:var(--fg); }
+
+/* ── nav ── */
+.nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg); backdrop-filter:blur(16px) saturate(1.2);
+  border-bottom:1px solid var(--a-hair-soft);
+  color:var(--a-fg);
+  --fg:var(--a-fg); --fg-dim:var(--a-dim); --hair:var(--a-hair);
+  --logo-bg:var(--a-logo-bg); --logo-fg:var(--a-logo-fg);
+}
+.nav-in{ display:flex; align-items:center; gap:1.5rem; height:72px; }
+.mark{ display:flex; align-items:center; gap:.75rem; text-decoration:none; margin-right:auto; }
+/* 로고 — 둥근 사각 뱃지 + 볼드 국문 + 대문자 자간 서브텍스트
+   주의: 서브텍스트 규칙은 반드시 .mark-copy 로 한정한다.
+   .mark span 으로 쓰면 .mark-badge(도 span)까지 잡아 글자가 회색·작게 눌린다. */
+.mark-badge{
+  width:46px; height:46px; flex:none; border-radius:12px;
+  display:grid; place-items:center;
+  background:var(--logo-bg);
+  color:#FFFFFF;
+  font-family:var(--sans); font-size:1.08rem; font-weight:900;
+  letter-spacing:-.01em; line-height:1;
+}
+.mark-copy b{
+  display:block; font-family:var(--sans); font-size:1.02rem; font-weight:800;
+  letter-spacing:-.025em; line-height:1.3;
+}
+.mark-copy span{
+  display:block; font-family:var(--sans); font-size:.6rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--fg-dim); line-height:1.4;
+}
+.nav-links{ display:flex; gap:1.5rem; }
+.nav-links a{ font-size:.82rem; color:var(--fg-dim); text-decoration:none; transition:color .2s; white-space:nowrap; }
+.nav-links a:hover{ color:var(--fg); }
+@media (max-width:980px){ .nav-links{ display:none; } }
+
+/* ── hero — 영상은 우측 칼럼에. 스크림을 걷어내 인물이 또렷하게 보인다. ── */
+.hero{ padding-block:clamp(3.5rem,8vw,6.5rem) clamp(3rem,6vw,5rem); }
+.hero-player{ position:relative; }
+.hero-video{
+  display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
+  border-radius:4px; border:1px solid var(--hair-soft); background:#0A0E24;
+  filter:contrast(1.12) saturate(1.12) brightness(1.05);
+}
+
+/* 소리 토글 — 브라우저는 소리 있는 자동재생을 막으므로 클릭으로 켠다 */
+.sound-btn{
+  position:absolute; right:.75rem; bottom:.75rem;
+  display:inline-flex; align-items:center; gap:.5rem; cursor:pointer;
+  padding:.5rem .85rem; border-radius:999px; font-family:inherit;
+  font-size:.74rem; font-weight:650; letter-spacing:-.01em;
+  background:rgba(8,12,32,.68); color:#fff; border:1px solid rgba(255,255,255,.32);
+  backdrop-filter:blur(8px); transition:background .25s, border-color .25s;
+}
+.sound-btn:hover{ background:var(--coral-solid); border-color:var(--coral-solid); }
+.sound-btn svg{ width:15px; height:15px; flex:none; }
+.sound-btn .ico-on{ display:none; }
+.sound-btn[aria-pressed="true"] .ico-on{ display:block; }
+.sound-btn[aria-pressed="true"] .ico-off{ display:none; }
+
+.hero-cards{ display:grid; grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); gap:.8rem; margin-top:.9rem; }
+@media (max-width:560px){ .hero-cards{ grid-template-columns:1fr; } }
+.hero-grid{
+  display:grid; grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);
+  gap:clamp(2rem,5vw,4rem); align-items:center;
+}
+@media (max-width:960px){ .hero-grid{ grid-template-columns:1fr; } }
+.pill{
+  display:inline-flex; align-items:center; gap:.55rem; padding:.4rem .95rem;
+  border:1px solid var(--hair); border-radius:999px; font-size:.78rem; color:var(--fg-dim);
+  margin-bottom:1.5rem;
+}
+.pill i{ width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none; }
+.hero h1{
+  font-size:clamp(2.05rem,5vw,3.9rem); font-weight:800; line-height:1.14;
+  letter-spacing:-.04em; margin:0 0 1.5rem; text-wrap:balance;
+}
+.hero h1 em{ display:block; font-style:normal; color:var(--coral); margin-top:.12em; }
+.hero-desc{ color:var(--fg-dim); max-width:44ch; margin:0 0 2.2rem; font-size:1.06rem; }
+.hero-desc strong{ color:var(--fg); font-weight:700; }
+.hero-act{ display:flex; gap:.9rem; flex-wrap:wrap; align-items:center; }
+.play-link{ display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; font-size:.88rem; }
+.play-link i{
+  width:34px; height:34px; border-radius:50%; border:1px solid var(--hair);
+  display:grid; place-items:center; font-style:normal; font-size:.6rem; color:var(--coral);
+  transition:background .25s,border-color .25s;
+}
+.play-link:hover i{ background:var(--coral-solid); border-color:var(--coral-solid); color:#fff; }
+
+.metrics{
+  display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.2rem;
+  margin-top:3rem; padding-top:2.2rem; border-top:1px solid var(--hair-soft);
+}
+@media (max-width:620px){ .metrics{ grid-template-columns:repeat(2,1fr); row-gap:2rem; } }
+.metrics dd{
+  margin:0; font-size:clamp(1.7rem,3.8vw,2.5rem); font-weight:800; letter-spacing:-.04em;
+  line-height:1; font-variant-numeric:tabular-nums;
+}
+.metrics .gold dd{ color:var(--a-stat-hi); }
+.metrics dt{ margin-top:.65rem; font-size:.74rem; color:var(--fg-dim); line-height:1.5; }
+
+.float{
+  padding:1rem 1.15rem; border-radius:4px;
+  background:var(--float-bg); border:1px solid var(--hair-soft);
+}
+.float span{
+  display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; color:var(--gold);
+  margin-bottom:.4rem;
+}
+.float strong{ font-size:.92rem; font-weight:700; line-height:1.5; letter-spacing:-.015em; }
+.f-ai{ display:grid; align-content:center; }
+.f-ai strong{ display:block; color:var(--coral); font-size:1.15rem; }
+.f-ai span{ margin:.3rem 0 0; color:var(--fg-dim); }
+
+/* ══════ CAROUSEL (2장) ══════ */
+/* 캐러셀은 사진 위 자막 가독성을 위해 두 테마 모두 어두운 스크림을 유지한다 */
+.reel{
+  position:relative; width:100%; height:clamp(540px,84vh,900px);
+  overflow:hidden; cursor:grab; touch-action:pan-y; user-select:none;
+  border-block:1px solid rgba(243,234,218,.14);
+  color:var(--cream);
+  --fg:var(--cream); --fg-dim:#C3D0EA; --gold:#EDBC63;
+}
+.reel.grabbing{ cursor:grabbing; }
+.slide{
+  position:absolute; inset:0; opacity:0;
+  transition:opacity 1s cubic-bezier(.4,0,.2,1); pointer-events:none;
+}
+.slide.on{ opacity:1; pointer-events:auto; }
+/* 홀수 = ink, 짝수 = 남색 */
+.slide[data-i="0"]{ background:#0E1330; --tint:14,19,48; }
+.slide[data-i="1"]{ background:#16265E; --tint:22,38,94; }
+.slide[data-i="2"]{ background:#0E1330; --tint:14,19,48; }
+
+/* fit 모드 — 4컷 만화처럼 잘리면 안 되는 자료용. 전체를 보여주고
+   자막은 아래 여백에 자리를 따로 확보한다. */
+.reel--fit .slide-media{
+  padding:clamp(1.4rem,3.5vw,2.6rem) var(--pad) clamp(8.5rem,15vw,11rem);
+}
+.reel--fit .slide-media img,
+.reel--fit .slide.on .slide-media img{
+  object-fit:contain; transform:none; transition:none;
+}
+.reel--fit .slide-media::after{
+  background:linear-gradient(180deg, transparent 52%, rgba(var(--tint),.86) 78%, rgba(var(--tint),.97) 100%);
+}
+.reel--fit .slide-copy{ bottom:clamp(4.5rem,8vw,6rem); }
+.reel--fit .slide-copy h3{ font-size:clamp(1.5rem,3.4vw,2.4rem); }
+.slide-media{ position:absolute; inset:0; overflow:hidden; }
+.slide-media img{
+  width:100%; height:100%; object-fit:cover; object-position:var(--pos,center 20%);
+  transform:scale(1.12);
+}
+.slide.on .slide-media img{ transition:transform 8s linear; transform:scale(1); }
+.slide-media::after{
+  content:""; position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(var(--tint),.72) 0%, rgba(var(--tint),0) 28%, rgba(var(--tint),0) 40%, rgba(var(--tint),.94) 88%),
+    linear-gradient(90deg, rgba(var(--tint),.82) 0%, rgba(var(--tint),0) 58%);
+}
+.slide-copy{
+  position:absolute; left:0; right:0; bottom:clamp(5.5rem,10vw,7.5rem);
+  padding-inline:var(--pad); max-width:var(--maxw); margin-inline:auto;
+}
+.slide-copy .kicker{ color:var(--gold); }
+.slide-copy h3{
+  font-size:clamp(1.9rem,4.6vw,3.4rem); font-weight:800; letter-spacing:-.04em;
+  line-height:1.16; margin:0 0 1rem; max-width:17ch; text-wrap:balance;
+}
+.slide-copy p{ margin:0; color:#CBD4EA; max-width:48ch; }
+.slide.on .kicker,.slide.on h3,.slide.on p{ animation:riseIn .9s cubic-bezier(.16,.9,.24,1) both; }
+.slide.on h3{ animation-delay:.1s } .slide.on p{ animation-delay:.2s }
+@keyframes riseIn{ from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:none} }
+
+.reel-bar{
+  position:absolute; left:0; right:0; bottom:0; z-index:5;
+  padding:0 var(--pad) clamp(1.4rem,3vw,2.2rem); max-width:var(--maxw); margin-inline:auto;
+  display:flex; align-items:flex-end; gap:1.4rem;
+}
+.reel-count{
+  font-family:var(--mono); font-size:.72rem; color:var(--cream);
+  font-variant-numeric:tabular-nums; display:flex; align-items:baseline; gap:.35rem;
+}
+.reel-count i{ font-style:normal; font-size:1.5rem; font-weight:700; }
+.reel-count s{ text-decoration:none; opacity:.45; }
+.thumbs{ display:flex; gap:.6rem; margin-right:auto; margin-left:1.2rem; }
+.thumb{
+  width:62px; height:44px; padding:0; border-radius:2px; overflow:hidden; cursor:pointer;
+  border:1px solid rgba(243,234,218,.28); background:none; opacity:.5;
+  transition:opacity .3s,border-color .3s,transform .3s;
+}
+.thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.thumb:hover{ opacity:.85; transform:translateY(-3px); }
+.thumb[aria-current="true"]{ opacity:1; border-color:var(--gold); }
+@media (max-width:700px){ .thumbs{ display:none } }
+.reel-btns{ display:flex; gap:.5rem; align-items:center; }
+.rb{
+  width:46px; height:46px; border-radius:50%; cursor:pointer; display:grid; place-items:center;
+  border:1px solid rgba(243,234,218,.3); background:rgba(14,19,48,.45); color:var(--cream);
+  backdrop-filter:blur(6px); transition:background .25s,border-color .25s;
+}
+.rb:hover{ background:var(--coral-solid); border-color:var(--coral-solid); }
+.rb svg{ width:16px; height:16px; }
+.ring{ position:relative; width:46px; height:46px; }
+.ring svg{ position:absolute; inset:0; transform:rotate(-90deg); }
+.ring circle{ fill:none; stroke-width:1.5; }
+.ring .bg{ stroke:rgba(243,234,218,.22); }
+.ring .fg{ stroke:var(--gold); stroke-dasharray:138; stroke-dashoffset:138; }
+.ring.run .fg{ animation:sweep var(--dur,7s) linear forwards; }
+@keyframes sweep{ to{ stroke-dashoffset:0 } }
+.ring button{
+  position:absolute; inset:0; border:none; background:none; cursor:pointer;
+  color:var(--cream); display:grid; place-items:center; padding:0;
+}
+.ring button svg{ position:static; transform:none; width:12px; height:12px; }
+
+/* ── marquee ── */
+.mq{ overflow:hidden; padding-block:1.1rem; border-block:1px solid var(--hair-soft); }
+.mq-track{
+  display:flex; width:max-content; gap:2.4rem; align-items:center;
+  animation:run 36s linear infinite; white-space:nowrap;
+  font-family:var(--mono); font-size:.74rem; letter-spacing:.22em; color:var(--fg-dim);
+}
+.mq-track em{ display:flex; align-items:center; gap:2.4rem; font-style:normal; }
+.mq-track em::after{ content:"✦"; color:var(--gold); font-size:.7rem; }
+@keyframes run{ to{ transform:translateX(-50%) } }
+
+/* ── 01 WHO I AM ── */
+.who{ display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:clamp(2rem,5vw,4.5rem); align-items:start; }
+@media (max-width:880px){ .who{ grid-template-columns:1fr } }
+.who blockquote{
+  margin:0; font-size:clamp(1.4rem,3vw,2.2rem); font-weight:800; line-height:1.36;
+  letter-spacing:-.035em; text-wrap:balance;
+}
+.who blockquote em{ font-style:normal; color:var(--coral); }
+.tags{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:2rem; }
+.tags span{
+  padding:.45rem .95rem; border:1px solid var(--hair); border-radius:999px;
+  font-size:.82rem; color:var(--fg-dim);
+}
+
+/* ── 02 VALUES ── */
+.vals{ margin-top:3rem; border-top:1px solid var(--hair-soft); }
+.val{
+  display:grid; grid-template-columns:92px minmax(0,1fr) minmax(0,1.2fr);
+  gap:clamp(1rem,4vw,3rem); align-items:start;
+  padding-block:2.3rem; border-bottom:1px solid var(--hair-soft);
+  transition:background .35s, padding-inline .35s;
+}
+.val:hover{ background:var(--surface); padding-inline:1.3rem; }
+@media (max-width:760px){ .val{ grid-template-columns:1fr; gap:.55rem } .val:hover{ padding-inline:0 } }
+.val .n{ font-family:var(--mono); font-size:.72rem; letter-spacing:.18em; color:var(--gold); padding-top:.5rem; }
+.val h3{ font-size:clamp(1.35rem,2.7vw,1.95rem); font-weight:800; letter-spacing:-.03em; margin:0; }
+.val h3 small{
+  display:block; font-family:var(--mono); font-size:.6rem; letter-spacing:.24em;
+  color:var(--fg-dim); font-weight:400; margin-bottom:.5rem;
+}
+.val p{ margin:0; color:var(--fg-dim); }
+
+/* ── 03 SCHOOL ── */
+.school{ display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1fr); gap:clamp(2rem,5vw,4.5rem); align-items:center; }
+@media (max-width:880px){ .school{ grid-template-columns:1fr } }
+.school img{ width:100%; height:auto; display:block; border-radius:3px; border:1px solid var(--hair-soft); }
+.big-jump{
+  font-size:clamp(2.6rem,7vw,5rem); font-weight:800; line-height:.98; letter-spacing:-.055em;
+  margin:0 0 1.4rem;
+}
+.big-jump em{ display:block; font-family:var(--serif); font-style:italic; font-weight:400; color:var(--gold); letter-spacing:-.02em; }
+.school-tags{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.8rem; }
+.school-tags span{ padding:.45rem .95rem; border:1px solid var(--hair); border-radius:2px; font-size:.82rem; color:var(--fg-dim); }
+
+/* ── 04 EXPERTISE ── */
+.grid3{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+  gap:1px; margin-top:3rem; background:var(--hair-soft); border:1px solid var(--hair-soft);
+}
+.cell{ background:var(--band-bg); padding:2.3rem 1.9rem; transition:background .35s; position:relative; }
+.cell:hover{ background:color-mix(in srgb, var(--fg) 7%, var(--band-bg)); }
+.cell .code{ font-family:var(--mono); font-size:.62rem; letter-spacing:.22em; color:var(--coral); }
+.cell .cn{
+  position:absolute; top:1.9rem; right:1.9rem; font-family:var(--mono);
+  font-size:.72rem; color:var(--fg-dim); opacity:.6;
+}
+.cell h3{ font-size:1.18rem; font-weight:750; letter-spacing:-.02em; margin:1.2rem 0 .75rem; }
+.cell p{ margin:0; color:var(--fg-dim); font-size:.95rem; }
+
+/* ── 05 EXPERIENCE ── */
+.exp{ display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:start; }
+@media (max-width:980px){ .exp{ grid-template-columns:1fr } }
+.tl-row{
+  display:grid; grid-template-columns:120px minmax(0,1fr); gap:clamp(1rem,3vw,2.2rem);
+  padding-block:1.9rem; border-top:1px solid var(--hair-soft); align-items:baseline;
+}
+.tl-row:last-child{ border-bottom:1px solid var(--hair-soft); }
+@media (max-width:640px){ .tl-row{ grid-template-columns:1fr; gap:.45rem } }
+.tl-row .yr{ font-family:var(--mono); font-size:1.45rem; font-weight:700; color:var(--sky); font-variant-numeric:tabular-nums; }
+.tl-row.gold .yr{ color:var(--gold); }
+.tl-row h3{ font-size:1.1rem; font-weight:750; letter-spacing:-.02em; margin:0 0 .35rem; }
+.tl-row p{ margin:0; color:var(--fg-dim); font-size:.95rem; }
+
+.note{ padding:2.2rem 1.9rem; border:1px solid var(--hair-soft); background:var(--surface); border-radius:3px; }
+.note .lab{ font-family:var(--mono); font-size:.6rem; letter-spacing:.2em; color:var(--gold); margin:0 0 1rem; }
+.note .qm{ font-family:var(--serif); font-size:3rem; line-height:.6; color:var(--coral); }
+.note blockquote{
+  margin:1rem 0 2rem; font-size:1.2rem; font-weight:750; line-height:1.5; letter-spacing:-.025em;
+}
+.links{ display:grid; gap:.7rem; }
+.ilink{
+  display:block; text-decoration:none; padding:1rem 1.1rem; border-radius:2px;
+  border:1px solid var(--hair-soft); transition:background .3s,border-color .3s,transform .3s;
+}
+.ilink:hover{ background:color-mix(in srgb, var(--fg) 7%, transparent); border-color:var(--coral); transform:translateX(4px); }
+.ilink span{ display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; color:var(--gold); }
+.ilink strong{ display:block; font-size:.95rem; font-weight:700; margin:.35rem 0 .25rem; letter-spacing:-.015em; }
+.ilink small{ display:block; font-size:.76rem; color:var(--fg-dim); }
+
+/* ── 06 FIELD ── */
+.creds{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));
+  gap:clamp(1.6rem,3.5vw,3rem); margin-top:3rem;
+}
+.cred .code{ font-family:var(--mono); font-size:.62rem; letter-spacing:.22em; color:var(--coral); }
+.cred h3{ font-size:1.1rem; font-weight:750; letter-spacing:-.02em; margin:.5rem 0 1.3rem; }
+.cred ul{ list-style:none; margin:0; padding:0; }
+.cred li{
+  display:grid; grid-template-columns:84px minmax(0,1fr); gap:.9rem;
+  padding-block:.95rem; border-top:1px solid var(--hair-soft); font-size:.9rem; line-height:1.55;
+}
+.cred li strong{ font-family:var(--mono); font-size:.7rem; font-weight:400; color:var(--fg-dim); padding-top:.2rem; font-variant-numeric:tabular-nums; }
+.cred li small{ display:block; color:var(--fg-dim); font-size:.76rem; margin-top:.15rem; }
+
+/* ── 07 TRAINING ── */
+.flow{
+  display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:2.4rem;
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.1em; color:var(--fg-dim);
+}
+.flow span{ color:var(--fg); padding:.55rem 1.05rem; border:1px solid var(--hair); border-radius:2px; }
+.flow b{ color:var(--coral); }
+.works{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));
+  gap:1.2rem; margin-top:3rem;
+}
+.work{
+  display:flex; flex-direction:column; gap:.8rem; text-decoration:none;
+  padding:2rem 1.8rem; border:1px solid var(--hair-soft); background:var(--surface); border-radius:3px;
+  transition:transform .35s cubic-bezier(.2,.8,.25,1),border-color .3s,background .3s;
+}
+.work:hover{ transform:translateY(-7px); border-color:var(--coral); background:color-mix(in srgb, var(--fg) 9%, transparent); }
+.work .top{
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.2em; color:var(--gold);
+}
+.work .ico{
+  width:46px; height:46px; border-radius:3px; display:grid; place-items:center;
+  background:var(--coral-solid); color:#fff; font-family:var(--mono); font-size:.72rem; font-weight:700;
+  margin:.4rem 0;
+}
+.work h3{ font-size:1.14rem; font-weight:750; letter-spacing:-.02em; margin:0; line-height:1.4; }
+.work p{ margin:0; color:var(--fg-dim); font-size:.92rem; flex:1; }
+.work small{ font-size:.82rem; font-weight:650; color:var(--coral); }
+
+/* ── CHANNEL ── */
+.chan{ display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:center; }
+@media (max-width:880px){ .chan{ grid-template-columns:1fr } }
+.chan-art{
+  position:relative; aspect-ratio:1; display:grid; place-items:center;
+  border:1px solid var(--hair-soft); border-radius:3px; overflow:hidden;
+}
+.orbit{ position:absolute; border:1px solid var(--hair-soft); border-radius:50%; }
+.o1{ inset:12%; animation:spin 24s linear infinite; border-style:dashed; }
+.o2{ inset:26%; animation:spin 34s linear reverse infinite; }
+@keyframes spin{ to{ transform:rotate(360deg) } }
+.chan-art .big{
+  position:relative; font-size:clamp(1.8rem,5vw,3rem); font-weight:800; line-height:1;
+  letter-spacing:-.05em; text-align:center; margin:0;
+}
+.chan-art .big b{ color:var(--coral); }
+.yt-lab{ font-family:var(--mono); font-size:.66rem; letter-spacing:.24em; color:var(--coral); margin:0 0 1rem; }
+
+/* ── FINAL — 글자 좌측, 인물 사진 우측 ── */
+.final{ padding-block:clamp(5rem,10vw,8.5rem); }
+.final-grid{
+  display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.66fr);
+  gap:clamp(2rem,5vw,4.5rem); align-items:center;
+}
+@media (max-width:820px){ .final-grid{ grid-template-columns:1fr; } }
+.final-portrait{ margin:0; width:100%; max-width:320px; justify-self:center; }
+.final-portrait img{
+  width:100%; height:auto; display:block; border-radius:4px;
+  border:1px solid var(--hair-soft);
+}
+.final .motif{ justify-content:flex-start; }
+.final .motif::before{ display:none; }
+.final .lab{ font-family:var(--mono); font-size:.66rem; letter-spacing:.26em; color:var(--fg-dim); margin:1.5rem 0 1.1rem; }
+.final h2{
+  font-size:clamp(2rem,6vw,4.2rem); font-weight:800; line-height:1.08; letter-spacing:-.05em;
+  margin:0 0 2.4rem;
+}
+.final h2 em{ display:block; font-family:var(--serif); font-style:italic; font-weight:400; color:var(--gold); letter-spacing:-.02em; }
+.final-links{ display:flex; gap:1.4rem; justify-content:flex-start; flex-wrap:wrap; align-items:center; }
+.final-links > a:last-child{ font-size:.86rem; color:var(--fg-dim); text-decoration:none; }
+.final-links > a:last-child:hover{ color:var(--fg); }
+
+.foot{ padding-block:2.6rem; display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap; font-size:.8rem; color:var(--fg-dim); }
+.foot .mark{ margin-right:auto; }
+/* 푸터 로고는 남색 위 순백으로 */
+.foot .mark-copy b, .foot .mark-copy span{ color:#FFFFFF; }
+.foot a[target]{ text-decoration:none; }
+.foot a[target]:hover{ color:var(--fg); }
+
+/* ── reveal ── */
+.rv{ opacity:0; transform:translateY(28px); }
+.rv.in{ opacity:1; transform:none; transition:opacity .8s ease, transform .95s cubic-bezier(.16,.9,.24,1); }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important; animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .rv{ opacity:1; transform:none }
+  .slide.on .slide-media img{ transform:scale(1) }
+}
+</style>
+
+<div class="page" id="top">
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="mark" href="#top" aria-label="처음으로 이동">
+        <span class="mark-badge">J:H</span>
+        <span class="mark-copy"><b>중일투더맥스</b><span>AI · Digital Innovator</span></span>
+      </a>
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <a href="#about">소개</a>
+        <a href="#values">가치</a>
+        <a href="#expertise">전문성</a>
+        <a href="#experience">경력</a>
+        <a href="#field">활동</a>
+        <a href="#training">연수</a>
+        <a href="#channel">채널</a>
+      </nav>
+      <a class="btn" href="https://youtube.com/@ddingle?si=jn0luDO_kWc8hdwZ" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    </div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero band-a">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="pill rv"><i></i>중일고등학교 · 연구부장</p>
+        <p class="kicker rv">TEACHER · TRAINER · EDUCATION INNOVATOR</p>
+        <h1 class="rv">도전, 성장, 나눔으로<em>내일의 교실을 만듭니다.</em></h1>
+        <p class="hero-desc rv">
+          안녕하세요. 학생들의 질문과 세상의 문제를 AI와 함께 풀어가는
+          영어교사 <strong>조태욱, 중일투더맥스</strong>입니다.
+        </p>
+        <div class="hero-act rv">
+          <a class="btn btn-cream" href="#about">중일투더맥스 알아보기 ↓</a>
+          <a class="play-link" href="https://youtube.com/@ddingle?si=jn0luDO_kWc8hdwZ" target="_blank" rel="noopener noreferrer">
+            <i>▶</i>유튜브 채널
+          </a>
+        </div>
+
+        <dl class="metrics rv">
+          <div><dd data-count="20" data-suffix="+">0</dd><dt>교직 경력</dt></div>
+          <div><dd data-count="2024" data-plain="1">0</dd><dt>AIEDAP 마스터 교원</dt></div>
+          <div class="gold"><dd data-count="2025" data-plain="1">0</dd><dt>AI·디지털 역량 강화<br>교육부장관상</dt></div>
+          <div><dd data-count="2026" data-plain="1">0</dd><dt>인공지능 선도교사 강사</dt></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual rv">
+        <div class="hero-player">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+          <source src="assets/hero.mp4" type="video/mp4">
+        </video>
+        <button class="sound-btn" type="button" data-sound aria-pressed="false">
+          <svg class="ico-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M11 5L6 9H3v6h3l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/>
+          </svg>
+          <svg class="ico-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M11 5L6 9H3v6h3l5 4V5z"/><path d="M16 8.5a4.5 4.5 0 010 7M19 5.5a8.5 8.5 0 010 13"/>
+          </svg>
+          <span data-sound-label>소리 켜기</span>
+        </button>
+        </div>
+
+        <div class="hero-cards">
+          <div class="float f-mission">
+            <span>MY MISSION</span>
+            <strong>단 한 명도 포기하지 않는<br>학생 맞춤형 수업</strong>
+          </div>
+          <div class="float f-ai">
+            <strong>AI</strong>
+            <span>CHALLENGE &amp; CHANGE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CAROUSEL (2장) ═══ -->
+  <section class="reel" id="reel" aria-roledescription="carousel" aria-label="중일투더맥스 대표 이미지">
+    <article class="slide on" data-i="0" role="group" aria-label="1 / 2">
+      <div class="slide-media"><img src="assets/jump-higher-brand.webp" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" style="--pos:center 18%"></div>
+      <div class="slide-copy">
+        <p class="kicker">03 · JUNGIL HIGH SCHOOL</p>
+        <h3>배움은 즐겁게,<br>성장은 꾸준히.</h3>
+        <p>중일고등학교의 교실에서 학생 한 명 한 명의 속도를 존중하고, 질문과 도전이 성장으로 이어지는 배움을 만들어갑니다.</p>
+      </div>
+    </article>
+
+    <article class="slide" data-i="1" role="group" aria-label="2 / 2">
+      <div class="slide-media"><img src="assets/teacher-portrait.webp" alt="교실에서 학생의 성장을 응원하는 교사 캐릭터" style="--pos:center 28%"></div>
+      <div class="slide-copy">
+        <p class="kicker">MY MISSION</p>
+        <h3>단 한 명도 포기하지 않는<br>학생 맞춤형 수업</h3>
+        <p>안녕하세요. 학생들의 질문과 세상의 문제를 AI와 함께 풀어가는 영어교사 조태욱, 중일투더맥스입니다.</p>
+      </div>
+    </article>
+
+    <div class="reel-bar">
+      <div class="reel-count"><i data-cur>01</i><s>/ <span data-total>02</span></s></div>
+      <div class="thumbs">
+        <button class="thumb" type="button" data-go="0" aria-current="true" aria-label="1번 슬라이드"><img alt=""></button>
+        <button class="thumb" type="button" data-go="1" aria-current="false" aria-label="2번 슬라이드"><img alt=""></button>
+      </div>
+      <div class="reel-btns">
+        <button class="rb" type="button" data-prev aria-label="이전 슬라이드">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="rb" type="button" data-next aria-label="다음 슬라이드">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <span class="ring">
+          <svg viewBox="0 0 46 46"><circle class="bg" cx="23" cy="23" r="22"/><circle class="fg" cx="23" cy="23" r="22"/></svg>
+          <button type="button" data-play aria-label="자동 재생 일시정지">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+          </button>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq band-b" aria-label="핵심 키워드">
+    <div class="mq-track">
+      <em>ENGLISH EDUCATION</em><em>AI IN CLASSROOM</em><em>CHALLENGE AND CHANGE</em><em>JUMP HIGHER</em>
+      <em>ENGLISH EDUCATION</em><em>AI IN CLASSROOM</em><em>CHALLENGE AND CHANGE</em><em>JUMP HIGHER</em>
+    </div>
+  </div>
+
+  <!-- ═══ 01 WHO I AM ═══ -->
+  <section class="sec band-a" id="about">
+    <div class="wrap">
+      <div class="idx rv"><b>01</b><small>WHO I AM</small></div>
+      <div class="who">
+        <blockquote class="rv">
+          “오늘의 학생을 <em>어제의 방식</em>으로 가르치는 것은,
+          그들의 <em>내일을 빼앗는 것</em>이다.”
+        </blockquote>
+        <div class="rv">
+          <p class="kicker">QUESTION · GROWTH · FUTURE</p>
+          <h2 class="title">교실의 질문을<br>미래의 가능성으로</h2>
+          <p class="lede">
+            영어교사로서 학생과 함께 질문하고, 연구부장으로서 학교의 변화를
+            설계하며, AI 교육 실천가로서 동료 교사와 경험을 나눕니다. 빠른
+            정답보다 깊은 질문을, 화려한 기술보다 학생의 성장을 먼저 봅니다.
+          </p>
+          <div class="tags" aria-label="주요 역할">
+            <span>영어교사</span><span>연구부장</span><span>AI 교육 실천가</span><span>교원 연수 강사</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 VALUES ═══ -->
+  <section class="sec band-b" id="values">
+    <div class="wrap">
+      <div class="idx rv"><b>02</b><small>CHALLENGE AND CHANGE</small></div>
+      <div class="rv">
+        <h2 class="title">중일에서 시작하는<br><span class="serif-it">세 가지 성장의 방식</span></h2>
+        <p class="lede">도전하고, 성장하고, 나누며 더 높이 도약합니다.</p>
+      </div>
+      <div class="vals">
+        <div class="val rv">
+          <span class="n">01</span>
+          <h3><small>CHALLENGE</small>도전하며 질문합니다</h3>
+          <p>정답을 외우기보다 더 좋은 질문을 만들고, 익숙한 교실 밖의 문제까지 탐색합니다.</p>
+        </div>
+        <div class="val rv">
+          <span class="n">02</span>
+          <h3><small>CHANGE</small>배우며 성장합니다</h3>
+          <p>느린 걸음도 배움의 과정입니다. 학생마다 다른 속도를 존중하며 꾸준한 변화를 만듭니다.</p>
+        </div>
+        <div class="val rv">
+          <span class="n">03</span>
+          <h3><small>SHARE</small>함께 나누며 커집니다</h3>
+          <p>교실에서 얻은 아이디어와 경험을 동료와 나누고, 더 나은 교육으로 연결합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 SCHOOL ═══ -->
+  <section class="sec band-a">
+    <div class="wrap school">
+      <div class="rv"><img src="assets/jump-higher-brand.webp" alt="Jungil High School Jump Higher 교육 브랜드 캐릭터 이미지" width="1279" height="2048" loading="lazy"></div>
+      <div class="rv">
+        <div class="idx"><b>03</b><small>JUNGIL HIGH SCHOOL</small></div>
+        <p class="big-jump">JUMP<em>HIGHER</em></p>
+        <h2 class="title">배움은 즐겁게,<br>성장은 꾸준히.</h2>
+        <p class="lede">
+          중일고등학교의 교실에서 학생 한 명 한 명의 속도를 존중하고,
+          질문과 도전이 성장으로 이어지는 배움을 만들어갑니다.
+        </p>
+        <div class="school-tags">
+          <span>도전 · Challenge</span><span>성장 · Change</span><span>나눔 · Share</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 EXPERTISE ═══ -->
+  <section class="sec band-b" id="expertise">
+    <div class="wrap">
+      <div class="idx rv"><b>04</b><small>EXPERTISE</small></div>
+      <div class="rv">
+        <h2 class="title">기술보다 학생을 먼저 보는<br><span class="serif-it">교육의 세 가지 축</span></h2>
+        <p class="lede">질문에서 출발해 수업, 학교, 교육 공동체의 변화로 확장합니다.</p>
+      </div>
+      <div class="grid3 rv">
+        <article class="cell">
+          <span class="code">EN</span><span class="cn">01</span>
+          <h3>AI와 함께하는 영어교육</h3>
+          <p>언어를 배우는 시간을 넘어, 학생의 질문과 세상의 문제를 AI와 함께 탐구하는 수업을 고민합니다.</p>
+        </article>
+        <article class="cell">
+          <span class="code">RD</span><span class="cn">02</span>
+          <h3>학교 연구와 수업 혁신</h3>
+          <p>연구부장으로서 교사의 실천이 학교의 변화로 이어질 수 있도록 수업과 연구를 연결합니다.</p>
+        </article>
+        <article class="cell">
+          <span class="code">AI</span><span class="cn">03</span>
+          <h3>AI·디지털 교육 확산</h3>
+          <p>AIEDAP 마스터 교원과 인공지능 선도교사 강사 경험을 바탕으로 함께 배우는 문화를 만듭니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 EXPERIENCE ═══ -->
+  <section class="sec band-a" id="experience">
+    <div class="wrap exp">
+      <div>
+        <div class="idx rv"><b>05</b><small>EXPERIENCE</small></div>
+        <div class="rv">
+          <h2 class="title">교실에서 쌓고,<br><span class="serif-it">함께 나눈 성장의 시간</span></h2>
+          <p class="lede">
+            영어교육에서 AI·디지털 교육까지. 모든 경험은 같은 질문을 향합니다.
+            “이 배움이 학생의 내일을 더 빛나게 하는가?”
+          </p>
+        </div>
+        <div class="tl">
+          <article class="tl-row rv"><span class="yr">20+</span>
+            <div><h3>교직 경력</h3><p>영어교사로서 학생의 질문을 수업의 출발점으로 삼아 온 시간</p></div>
+          </article>
+          <article class="tl-row rv"><span class="yr">2024</span>
+            <div><h3>AIEDAP 마스터 교원</h3><p>AI·디지털 기반 교육을 학교 현장과 연결하는 실천</p></div>
+          </article>
+          <article class="tl-row gold rv"><span class="yr">2025</span>
+            <div><h3>교육부장관상 · AI·디지털 역량 강화 혁신 부문</h3><p>교사 AI·디지털 역량 강화 혁신 부문 교육부장관상 수상</p></div>
+          </article>
+          <article class="tl-row rv"><span class="yr">2026</span>
+            <div><h3>인공지능 선도교사 강사</h3><p>교실에서 쌓은 경험을 동료 교사와 나누며 교육 혁신을 확산</p></div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="note rv" aria-label="교육 철학">
+        <p class="lab">JUNGIL TO THE MAX · EDUCATION NOTE</p>
+        <div class="qm" aria-hidden="true">“</div>
+        <blockquote>좋은 교사는 멈추지 않고,<br>좋은 영향력을 남깁니다.</blockquote>
+        <div class="links" aria-label="AI 교육 활동 자료">
+          <a class="ilink" href="https://jungil-to-the-max.vercel.app/nightingale-data-analysis.webp" target="_blank" rel="noopener noreferrer">
+            <span>01 · DATA</span><strong>데이터 분석</strong><small>나이팅게일 차트 살펴보기 ↗</small>
+          </a>
+          <a class="ilink" href="https://jungil-to-the-max.vercel.app/gemini-storybook-ai-teacher.pdf" target="_blank" rel="noopener noreferrer">
+            <span>02 · CREATE</span><strong>AI 활용 창작(제미나이 스토리북)</strong><small>스토리북 PDF 살펴보기 ↗</small>
+          </a>
+          <a class="ilink" href="https://canva.link/vm4dgi5pwu0nkew" target="_blank" rel="noopener noreferrer">
+            <span>03 · VIDEO</span><strong>AI 동영상 제작</strong><small>영상 사례 살펴보기 ↗</small>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ═══ 06 FIELD OF WORK ═══ -->
+  <section class="sec band-b" id="field">
+    <div class="wrap">
+      <div class="idx rv"><b>06</b><small>FIELD OF WORK</small></div>
+      <div class="rv">
+        <p class="kicker">PRACTICE · CONNECT · INNOVATE</p>
+        <h2 class="title">현장에서 실천하고,<br><span class="serif-it">교육의 혁신을 이끕니다</span></h2>
+        <p class="lede">연수, 컨설팅, 교원양성, 전문적학습공동체를 연결해 배움이 실제 변화가 되도록 합니다.</p>
+      </div>
+
+      <div class="creds">
+        <article class="cred rv">
+          <span class="code">TEACHING &amp; TRAINING</span>
+          <h3>AI·디지털 연수</h3>
+          <ul>
+            <li><strong>2024·2025</strong><span>대전시교육청 디지털 기반 혁신 수업 연수 강사</span></li>
+            <li><strong>2024</strong><span>세종특별시교육청 디지털 기반 교육혁신 연수 강사</span></li>
+            <li><strong>2025</strong><span>AIEDAP 수도권역 마스터교원 전문성 강화 연수 강사<small>서울대학교 사범대학 교육연수원</small></span></li>
+            <li><strong>2026</strong><span>중등 AI·디지털 수업역량 강화 연수 강사</span></li>
+            <li><strong>2026</strong><span>대전시교육청 교감·복직·영어교사 AI·디지털 역량 강화 연수 강사</span></li>
+          </ul>
+        </article>
+
+        <article class="cred rv">
+          <span class="code">TEACHER EDUCATION</span>
+          <h3>대학·교원양성</h3>
+          <ul>
+            <li><strong>2024</strong><span>공주대학교 영어과 학생맞춤형 AI 활용 교육 강사</span></li>
+            <li><strong>2025</strong><span>영재교육원 강사</span></li>
+            <li><strong>2025·2026</strong><span>목원대학교 교원양성기관 환류개선위원회 위원</span></li>
+            <li><strong>2025·2026</strong><span>한국교원대학교 진로진학 부전공 교사 연수 강사</span></li>
+          </ul>
+        </article>
+
+        <article class="cred rv">
+          <span class="code">CLASSROOM INNOVATION</span>
+          <h3>수업혁신·현장지원</h3>
+          <ul>
+            <li><strong>2025·2026</strong><span>수업공감성장 영어수업혁신 선도교사</span></li>
+            <li><strong>2025</strong><span>전문적교사학습공동체와 인공지능 활동</span></li>
+            <li><strong>2025~2026</strong><span>충남대학교(ADE) 찾아가는 학교컨설팅 코디네이터 및 강사</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 07 AI TRAINING ═══ -->
+  <section class="sec band-a" id="training">
+    <div class="wrap">
+      <div class="idx rv"><b>07</b><small>AI TRAINING</small></div>
+      <div class="rv">
+        <p class="kicker">LEARN TODAY · USE TOMORROW</p>
+        <h2 class="title">배워서 바로 학교 현장에<br>적용하는 AI 강의<span class="serif-it">(연수)</span></h2>
+        <p class="lede">
+          도구 사용법에 머물지 않고 수업·평가 설계부터 학생 지원, 웹앱 제작까지
+          교실에서 바로 실행할 수 있는 결과물을 함께 만듭니다.
+        </p>
+        <div class="flow" aria-label="AI 연수 과정">
+          <span>배우기</span><b aria-hidden="true">→</b>
+          <span>직접 만들기</span><b aria-hidden="true">→</b>
+          <span>학교 현장에 적용하기</span>
+        </div>
+      </div>
+
+      <div class="works">
+        <a class="work rv" href="https://notebook.google.com/notebook/f16055cc-5ed4-48b0-8bc4-4a8317cafdc6" target="_blank" rel="noopener noreferrer">
+          <span class="top">01 · DESIGN <b aria-hidden="true">↗</b></span>
+          <span class="ico" aria-hidden="true">AI</span>
+          <h3>제미나이 노트북 활용<br>AI 수업 평가 설계</h3>
+          <p>교육과정과 성취기준을 바탕으로 수업과 평가를 함께 설계하는 실습</p>
+          <small>제미나이 노트북 열기</small>
+        </a>
+
+        <a class="work rv" href="https://notebook.google.com/notebook/205b471c-36d3-4784-b1d2-972c30b62098/preview" target="_blank" rel="noopener noreferrer">
+          <span class="top">02 · SUPPORT <b aria-hidden="true">↗</b></span>
+          <span class="ico" aria-hidden="true">Q+</span>
+          <h3>학생 수행평가<br>도우미 챗봇</h3>
+          <p>학생이 수행평가 과정에서 질문하고 피드백받을 수 있는 맞춤형 학습 도구</p>
+          <small>도우미 챗봇 체험하기</small>
+        </a>
+
+        <a class="work rv" href="https://max09.my.canva.site/up-down-number-game" target="_blank" rel="noopener noreferrer">
+          <span class="top">03 · CREATE <b aria-hidden="true">↗</b></span>
+          <span class="ico" aria-hidden="true">WEB</span>
+          <h3>캔바로 만드는<br>수업용 웹앱</h3>
+          <p>아이디어를 실제로 작동하는 참여형 수업 도구로 구현하는 제작 실습</p>
+          <small>UP &amp; DOWN 숫자 게임 보기</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 캐러셀 2 — 수업 자료 (3장) ═══ -->
+  <section class="reel reel--fit" id="reel2" aria-roledescription="carousel" aria-label="수업 자료">
+    <article class="slide on" data-i="0" role="group" aria-label="1 / 3">
+      <div class="slide-media"><img src="assets/material-confirmation-bias.jpg" alt="확증편향을 설명하는 4컷 수업 자료"></div>
+      <div class="slide-copy">
+        <p class="kicker">CLASSROOM MATERIAL · 01</p>
+        <h3>확증편향, 네 컷으로 배우기</h3>
+        <p>보고 싶은 정보만 보게 되는 이유를 학생의 언어로 풀어낸 수업 자료입니다.</p>
+      </div>
+    </article>
+
+    <article class="slide" data-i="1" role="group" aria-label="2 / 3">
+      <div class="slide-media"><img src="assets/material-smart-goods.jpg" alt="캐릭터를 활용한 스마트 테크 굿즈 5종 디자인"></div>
+      <div class="slide-copy">
+        <p class="kicker">CLASSROOM MATERIAL · 02</p>
+        <h3>스마트 테크 굿즈 5종</h3>
+        <p>수업 캐릭터를 태블릿 케이스부터 스티커까지 실제 굿즈로 확장한 디자인입니다.</p>
+      </div>
+    </article>
+
+    <article class="slide" data-i="2" role="group" aria-label="3 / 3">
+      <div class="slide-media"><img src="assets/material-question-map.jpg" alt="환경 문제로 질문을 만들고 분류하는 수업 흐름 4컷 자료"></div>
+      <div class="slide-copy">
+        <p class="kicker">CLASSROOM MATERIAL · 03</p>
+        <h3>질문을 만들고,<br>생각을 키워요</h3>
+        <p>환경 문제에서 출발해 질문을 만들고 유형별로 분류하는 수업의 전 과정입니다.</p>
+      </div>
+    </article>
+
+    <div class="reel-bar">
+      <div class="reel-count"><i data-cur>01</i><s>/ <span data-total>03</span></s></div>
+      <div class="thumbs">
+        <button class="thumb" type="button" data-go="0" aria-current="true" aria-label="1번 슬라이드"><img alt=""></button>
+        <button class="thumb" type="button" data-go="1" aria-current="false" aria-label="2번 슬라이드"><img alt=""></button>
+        <button class="thumb" type="button" data-go="2" aria-current="false" aria-label="3번 슬라이드"><img alt=""></button>
+      </div>
+      <div class="reel-btns">
+        <button class="rb" type="button" data-prev aria-label="이전 슬라이드">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="rb" type="button" data-next aria-label="다음 슬라이드">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <span class="ring">
+          <svg viewBox="0 0 46 46"><circle class="bg" cx="23" cy="23" r="22"/><circle class="fg" cx="23" cy="23" r="22"/></svg>
+          <button type="button" data-play aria-label="자동 재생 일시정지">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+          </button>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CHANNEL ═══ -->
+  <section class="sec band-b" id="channel">
+    <div class="wrap chan">
+      <div class="chan-art rv" aria-hidden="true">
+        <div class="orbit o1"></div>
+        <div class="orbit o2"></div>
+        <p class="big">JUMP<br>HIGHER<b>!</b></p>
+      </div>
+      <div class="rv">
+        <p class="yt-lab">▶ YOUTUBE CHANNEL</p>
+        <h2 class="title">중일투더맥스의<br><span class="serif-it">배움과 성장 기록</span></h2>
+        <p class="lede">
+          영어교육과 AI, 교실의 질문, 함께 성장하는 학교의 이야기를 기록합니다.
+          완벽해서 시작하는 것이 아니라, 시작하며 더 높이 도약합니다.
+        </p>
+        <p style="margin-top:2rem">
+          <a class="btn btn-hot" href="https://youtube.com/@ddingle?si=jn0luDO_kWc8hdwZ" target="_blank" rel="noopener noreferrer">유튜브 채널에서 만나기 ↗</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section class="final band-a">
+    <div class="wrap final-grid">
+      <div class="final-copy">
+      <div class="motif rv">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-1.6 2.4-4.4 4.2-6.6 6.6C3.2 11 2 13.6 2 16c0 3.2 4.4 5 10 5s10-1.8 10-5c0-2.4-1.2-5-3.4-7.4C16.4 6.2 13.6 4.4 12 2zm0 3.4c1.2 1.6 3 2.9 4.6 4.6 1.8 2 2.6 3.9 2.6 5.4 0 1.2-2.7 2.6-7.2 2.6S4.8 16.6 4.8 15.4c0-1.5.8-3.4 2.6-5.4C9 8.3 10.8 7 12 5.4z"/></svg>
+      </div>
+      <p class="lab rv">JUMP HIGHER · TO THE MAX</p>
+      <h2 class="rv">함께 변화를 이끌고<em>배움을 나눕니다.</em></h2>
+      <div class="final-links rv">
+        <a class="btn btn-hot" href="https://docs.google.com/forms/d/e/1FAIpQLSddhukKrKlBsO4NucKIvo6hVG2F1rcN8xXKDDHVj67SHbiFhQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Google Form으로 강의 문의 ↗</a>
+        <a href="#top">처음으로 돌아가기 ↑</a>
+      </div>
+      </div>
+
+      <figure class="final-portrait rv">
+        <img src="assets/teacher-portrait.webp" alt="교실에서 학생의 성장을 응원하는 교사 캐릭터" width="1024" height="1536" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <footer class="band-b">
+    <div class="wrap foot">
+      <a class="mark" href="#top">
+        <span class="mark-badge">J:H</span>
+        <span class="mark-copy"><b>중일투더맥스</b><span>AI · Digital Innovator</span></span>
+      </a>
+      <span>Jungil High School · Jump Higher</span>
+      <a href="https://youtube.com/@ddingle?si=jn0luDO_kWc8hdwZ" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ── 히어로 배경 영상 ──
+     동작 최소화 설정이면 첫 프레임에서 정지, 화면 밖이면 재생을 멈춘다. */
+  (function(){
+    var v = document.querySelector(".hero-video");
+    if (!v) return;
+    var btn = document.querySelector("[data-sound]");
+    var label = btn && btn.querySelector("[data-sound-label]");
+
+    /* 소리 있는 자동재생은 브라우저가 차단한다.
+       무음으로 시작하고, 사용자가 누르면 그때 소리를 켠다. */
+    if (btn){
+      btn.addEventListener("click", function(){
+        v.muted = !v.muted;
+        btn.setAttribute("aria-pressed", v.muted ? "false" : "true");
+        if (label) label.textContent = v.muted ? "소리 켜기" : "소리 끄기";
+        if (!v.muted){ v.volume = 1; var q = v.play(); if (q && q.catch) q.catch(function(){}); }
+      });
+    }
+
+    if (reduce){ v.removeAttribute("autoplay"); v.pause(); return; }
+    if ("IntersectionObserver" in window){
+      new IntersectionObserver(function(en){
+        if (en[0].isIntersecting){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+        else v.pause();
+      }, { threshold:.05 }).observe(v);
+    }
+  })();
+
+  /* ── 캐러셀 (인스턴스 단위) ──
+     .reel 이 몇 개든 각자 독립적으로 동작한다. 페이지 안의 모든 .reel 에 적용. */
+  (function(){
+    var I_PAUSE='<rect x="6" y="5" width="4" height="14"></rect><rect x="14" y="5" width="4" height="14"></rect>';
+    var I_PLAY='<path d="M7 4l12 8-12 8z"></path>';
+
+    function initReel(root){
+      var slides=Array.prototype.slice.call(root.querySelectorAll(".slide"));
+      if(!slides.length) return;
+      var thumbs=Array.prototype.slice.call(root.querySelectorAll(".thumb"));
+      var cur=root.querySelector("[data-cur]");
+      var total=root.querySelector("[data-total]");
+      var ring=root.querySelector(".ring");
+      var play=root.querySelector("[data-play]");
+      var icon=play?play.querySelector("svg"):null;
+      var DUR=+(root.dataset.dur||7000), i=0, timer=null, playing=!reduce;
+
+      if(total) total.textContent=("0"+slides.length).slice(-2);
+
+      thumbs.forEach(function(t,n){
+        var s=slides[n]&&slides[n].querySelector("img");
+        if(s) t.querySelector("img").src=s.src;
+      });
+
+      function paint(){
+        slides.forEach(function(s,n){ s.classList.toggle("on", n===i); });
+        thumbs.forEach(function(t,n){ t.setAttribute("aria-current", n===i?"true":"false"); });
+        if(cur) cur.textContent=("0"+(i+1)).slice(-2);
+        if(playing) ringRun();
+      }
+      function ringRun(){
+        if(!ring) return;
+        ring.classList.remove("run"); void ring.offsetWidth;
+        ring.style.setProperty("--dur", DUR+"ms"); ring.classList.add("run");
+      }
+      function go(n){
+        i=(n%slides.length+slides.length)%slides.length;
+        paint(); if(playing) sched();
+      }
+      function sched(){ clearTimeout(timer); timer=setTimeout(function(){ go(i+1); }, DUR); }
+      function setPlay(on){
+        playing=on;
+        if(icon) icon.innerHTML=on?I_PAUSE:I_PLAY;
+        if(play) play.setAttribute("aria-label", on?"자동 재생 일시정지":"자동 재생 시작");
+        if(on){ ringRun(); sched(); }
+        else { clearTimeout(timer); if(ring) ring.classList.remove("run"); }
+      }
+
+      var p=root.querySelector("[data-prev]"), n2=root.querySelector("[data-next]");
+      if(p) p.addEventListener("click",function(){ go(i-1); });
+      if(n2) n2.addEventListener("click",function(){ go(i+1); });
+      if(play) play.addEventListener("click",function(){ setPlay(!playing); });
+      thumbs.forEach(function(t){ t.addEventListener("click",function(){ go(+t.dataset.go); }); });
+
+      var down=false,x0=0;
+      root.addEventListener("pointerdown",function(e){
+        if(e.target.closest("button")) return;
+        down=true; x0=e.clientX; root.classList.add("grabbing"); root.setPointerCapture(e.pointerId);
+      });
+      root.addEventListener("pointerup",function(e){
+        if(!down) return;
+        down=false; root.classList.remove("grabbing");
+        var d=e.clientX-x0; if(Math.abs(d)>60) go(i+(d<0?1:-1));
+      });
+      root.addEventListener("pointercancel",function(){ down=false; root.classList.remove("grabbing"); });
+
+      root.tabIndex=0;
+      root.addEventListener("keydown",function(e){
+        if(e.key==="ArrowRight"){ e.preventDefault(); go(i+1); }
+        if(e.key==="ArrowLeft"){ e.preventDefault(); go(i-1); }
+      });
+
+      if("IntersectionObserver" in window){
+        new IntersectionObserver(function(en){
+          if(!playing) return;
+          if(en[0].isIntersecting){ ringRun(); sched(); }
+          else { clearTimeout(timer); if(ring) ring.classList.remove("run"); }
+        },{ threshold:.25 }).observe(root);
+      }
+
+      paint();
+      if(playing) setPlay(true); else if(icon) icon.innerHTML=I_PLAY;
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll(".reel"), initReel);
+  })();
+
+  /* ── reveal + 카운터 ── */
+  (function(){
+    var items=document.querySelectorAll(".rv");
+    if(!("IntersectionObserver" in window)){
+      Array.prototype.forEach.call(items,function(el){ el.classList.add("in"); });
+    } else {
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var d=Array.prototype.indexOf.call(en.target.parentNode.children, en.target);
+          en.target.style.transitionDelay=Math.min(d,5)*80+"ms";
+          en.target.classList.add("in"); io.unobserve(en.target);
+        });
+      },{ threshold:.14, rootMargin:"0px 0px -6% 0px" });
+      Array.prototype.forEach.call(items,function(el){ io.observe(el); });
+    }
+
+    var cio=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var el=en.target; cio.unobserve(el);
+        var to=+el.dataset.count, sfx=el.dataset.suffix||"";
+        if(reduce){ el.textContent=to+sfx; return; }
+        var from=el.dataset.plain?to-45:0, t0=performance.now(), dur=1200;
+        (function step(now){
+          var p=Math.min((now-t0)/dur,1), e=1-Math.pow(1-p,3);
+          el.textContent=Math.round(from+(to-from)*e)+(p===1?sfx:"");
+          if(p<1) requestAnimationFrame(step);
+        })(t0);
+      });
+    },{ threshold:.6 });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-count]"),function(n){ cio.observe(n); });
+  })();
+
+  /* ── 내부 앵커만 부드럽게 (외부 링크는 그대로 열림) ── */
+  document.addEventListener("click",function(e){
+    var a=e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var id=a.getAttribute("href");
+    if(id==="#") return;
+    var t=document.querySelector(id);
+    if(!t) return;
+    e.preventDefault();
+    t.scrollIntoView({ behavior: reduce?"auto":"smooth", block:"start" });
+  });
+})();
+</script>
+
+</body>
+</html>
