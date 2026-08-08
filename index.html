@@ -220,9 +220,11 @@ h2.title{
 
 /* ── hero — 영상은 우측 칼럼에. 스크림을 걷어내 인물이 또렷하게 보인다. ── */
 .hero{ padding-block:clamp(3.5rem,8vw,6.5rem) clamp(3rem,6vw,5rem); }
+.hero-visual{ position:relative; }
 .hero-player{ position:relative; }
+/* 세로(9:16) 영상 — 인물 전신이 잘리지 않도록 원본 비율 그대로 */
 .hero-video{
-  display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
+  display:block; width:100%; aspect-ratio:9/16; object-fit:cover;
   border-radius:4px; border:1px solid var(--hair-soft); background:#0A0E24;
   filter:contrast(1.12) saturate(1.12) brightness(1.05);
 }
@@ -242,8 +244,15 @@ h2.title{
 .sound-btn[aria-pressed="true"] .ico-on{ display:block; }
 .sound-btn[aria-pressed="true"] .ico-off{ display:none; }
 
-.hero-cards{ display:grid; grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); gap:.8rem; margin-top:.9rem; }
-@media (max-width:560px){ .hero-cards{ grid-template-columns:1fr; } }
+/* 카드는 영상 위에 겹쳐 세로 공간을 아낀다 */
+.float{ position:absolute; z-index:2; }
+.f-mission{ top:7%; right:-9%; max-width:240px; }
+.f-ai{ bottom:9%; left:-10%; }
+@media (max-width:1100px){ .f-mission{ right:0; } .f-ai{ left:0; } }
+@media (max-width:620px){
+  .hero-cards{ display:grid; gap:.7rem; margin-top:.8rem; }
+  .float{ position:static; max-width:none; }
+}
 .hero-grid{
   display:grid; grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);
   gap:clamp(2rem,5vw,4rem); align-items:center;
@@ -285,7 +294,9 @@ h2.title{
 
 .float{
   padding:1rem 1.15rem; border-radius:4px;
-  background:var(--float-bg); border:1px solid var(--hair-soft);
+  background:var(--float-bg); border:1px solid var(--hair);
+  backdrop-filter:blur(10px) saturate(1.2);
+  box-shadow:0 12px 32px -18px rgba(8,12,32,.55);
 }
 .float span{
   display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; color:var(--gold);
