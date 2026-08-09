@@ -435,6 +435,25 @@ h2.title{
   padding:.45rem .95rem; border:1px solid var(--hair); border-radius:999px;
   font-size:.82rem; color:var(--fg-dim);
 }
+/* WHO I AM 의 대표 링크 카드 */
+.feature-link{
+  display:grid; gap:.5rem; text-decoration:none;
+  margin-top:clamp(1.8rem,4vw,2.6rem); padding:1.5rem 1.6rem;
+  border:1px solid var(--hair); border-radius:4px; background:var(--surface);
+  transition:transform .35s cubic-bezier(.2,.8,.25,1), border-color .3s, background .3s;
+}
+.feature-link:hover{
+  transform:translateY(-5px); border-color:var(--coral);
+  background:color-mix(in srgb, var(--fg) 7%, transparent);
+}
+.fl-label{ font-family:var(--mono); font-size:.66rem; letter-spacing:.26em; color:var(--gold); }
+.feature-link strong{ font-size:1.25rem; font-weight:800; letter-spacing:-.03em; line-height:1.35; }
+.fl-go{
+  display:inline-flex; align-items:center; gap:.4rem; margin-top:.2rem;
+  font-size:.9rem; font-weight:650; color:var(--coral);
+}
+.fl-go i{ font-style:normal; transition:transform .3s; }
+.feature-link:hover .fl-go i{ transform:translate(3px,-3px); }
 
 /* ── 02 VALUES ── */
 .vals{ margin-top:3rem; border-top:1px solid var(--hair-soft); }
@@ -748,10 +767,18 @@ h2.title{
     <div class="wrap">
       <div class="idx rv"><b>01</b><small>WHO I AM</small></div>
       <div class="who">
-        <blockquote class="rv">
-          “오늘의 학생을 <em>어제의 방식</em>으로 가르치는 것은,
-          그들의 <em>내일을 빼앗는 것</em>이다.”
-        </blockquote>
+        <div class="rv">
+          <blockquote>
+            “오늘의 학생을 <em>어제의 방식</em>으로 가르치는 것은,
+            그들의 <em>내일을 빼앗는 것</em>이다.”
+          </blockquote>
+
+          <a class="feature-link" href="https://canva.link/9ocm30xeh28d81j" target="_blank" rel="noopener noreferrer">
+            <span class="fl-label">AI CLASSROOM</span>
+            <strong>중일투더맥스 AI 교실</strong>
+            <span class="fl-go">둘러보기 <i aria-hidden="true">↗</i></span>
+          </a>
+        </div>
         <div class="rv">
           <p class="kicker">QUESTION · GROWTH · FUTURE</p>
           <h2 class="title">교실의 질문을<br>미래의 가능성으로</h2>
