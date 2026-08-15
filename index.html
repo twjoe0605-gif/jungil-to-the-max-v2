@@ -585,6 +585,16 @@ h2.title{
 .checks-out b{ color:var(--fg); font-weight:750; font-variant-numeric:tabular-nums; }
 .checks-out.is-done{ color:var(--sky); font-weight:650; }
 .checks-out.is-done b{ color:var(--sky); }
+.assess-full{
+  display:inline-flex; align-items:center; gap:.45rem; margin-top:1.8rem;
+  padding:.8rem 1.4rem; border-radius:3px; text-decoration:none;
+  border:1px solid var(--coral); color:var(--coral);
+  font-size:.88rem; font-weight:650;
+  transition:background .25s, color .25s;
+}
+.assess-full:hover{ background:var(--coral-solid); border-color:var(--coral-solid); color:#fff; }
+.assess-full i{ font-style:normal; transition:transform .3s; }
+.assess-full:hover i{ transform:translate(3px,-3px); }
 
 /* ── 04 EXPERTISE ── */
 .grid3{
@@ -1067,6 +1077,10 @@ h2.title{
             <li><label><input type="checkbox" data-check><span><b>중복·무관 내용 배제</b>정책과 무관하거나 같은 내용이 반복되지 않았습니까?</span></label></li>
           </ul>
           <p class="checks-out" data-checkout>통과 <b>0</b> / 4 — 모든 항목을 확인해야 안전합니다.</p>
+
+          <a class="assess-full" href="https://twjoe0605-gif.github.io/jungil-to-the-max-v2/assessment-2026.html" target="_blank" rel="noopener noreferrer">
+            원본 수행평가 대시보드 열기 <i aria-hidden="true">↗</i>
+          </a>
 
         </div>
       </details>
